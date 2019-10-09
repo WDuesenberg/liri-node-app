@@ -83,8 +83,7 @@ LIRI searches Bands in Town for concerts, Spotify for songs, and OMBD for movies
         Runs spotify-this-song for "I Want it That Way".
 
 # Link for Video
-https://drive.google.com/file/d/1mWZRPrdHydmyg_2PJN-euOEkct1c_XRv/view
-
+https://drive.google.com/file/d/1mWZRPrdHydmyg_2PJN-euOEkct1c_XRv/view?usp=sharing
 
 
 
