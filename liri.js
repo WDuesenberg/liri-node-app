@@ -7,7 +7,7 @@ var Spotify = require("node-spotify-api");
 var fs = require("fs");
 var spotify = new Spotify({
     id: keys.spotify.id,
-    secret: keys.spotify.secret,
+    secret: keys.spotify.secret,    
 });
 // var defaultSong = require("The Sign");
 var defaultMovie = "Mr Nobody";
@@ -20,7 +20,8 @@ var defaultMovie = "Mr Nobody";
  * Date of the Event (use moment to format this as "MM/DD/YYYY")
  */
 var action = process.argv[2];
-var value = process.argv[3];
+var value = process.argv.slice(3).join(" ");
+console.log(value);
 // console.log(process.argv)
 
 switch (action) {
@@ -69,15 +70,20 @@ function getSongs(songName) {
         songName = "I saw the Sign";
     }
 
-    spotify.search({ type: 'track', query: songName }, function (err, data) {
-        if (err) {
-            return console.log('Error occurred: ' + err);
-        }
+    spotify
+        .search({ type: 'track', query: songName })
+        .then(function (data) {
+        // console.log(data);
+        // if (err) {
+        //     return console.log('Error occurred: ' + err);
+        // }
         // else {
         //      console.log("Not right now. Later?")
         //      console.log(JSON.stringify(data));
         //      The song's name
         //Artist(s)
+        console.log(data)
+
         console.log("Artists: ", data.tracks.items[0].album.artists[0].name)
         // A preview link of the song from Spotify
         console.log("Preview Link: ", data.tracks.items[0].preview_url)
@@ -92,7 +98,7 @@ function getSongs(songName) {
 
 function getMovies(movieName) {
     // var movieName = value;
-    axios.get("http://www.omdbapi.com/?i=tt3896198&apikey=c95cf74e=" + movieName)
+    axios.get("http://www.omdbapi.com/?i=tt3896198&apikey=c95cf74e&t=" + movieName)
         .then(function (data) {
             // console.log(data.data);
             var results = `
