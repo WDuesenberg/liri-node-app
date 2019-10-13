@@ -1,4 +1,4 @@
-# liri-node-app
+spotify# liri-node-app
 LIRI is a Language Interpretation and Recognition Interface.
 
 # Overview
@@ -83,7 +83,8 @@ LIRI searches Bands in Town for concerts, Spotify for songs, and OMBD for movies
         Runs spotify-this-song for "I Want it That Way".
 
 # Link for Video
-file:///Users/wyatt_d/Downloads/LiriBot.webm
+Google Video
+https://drive.google.com/file/d/1hoyya-P3h6cP5BnReB4R83V9bzrqUMzY/view
 
 
 
